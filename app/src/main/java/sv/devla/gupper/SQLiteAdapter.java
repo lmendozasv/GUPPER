@@ -350,4 +350,34 @@ public class SQLiteAdapter {
         return fpp;
     }
 
+
+    public String getIDfromName(String name){
+        String empid="";
+        String selectQuery = "SELECT "+FIELD_GVALUE+" from "+DEPTO_TABLE+" where "+FIELD_GNAME+" = '" + name+"' ";
+
+        sqLiteHelper = new SQLiteHelper(context, DATABASE_NAME, null, MYDATABASE_VERSION);
+
+        SQLiteDatabase db = sqLiteHelper.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if(cursor.moveToFirst()){
+            empid = cursor.getString(0);
+        }
+        return empid;
+    }
+
+    public String getIDfromNameMuni(String name){
+        String empid="";
+        String selectQuery = "SELECT "+FIELD_GVALUE+" from "+MUNIC_TABLE+" where "+FIELD_GNAME+" = '" + name+"' ";
+
+        sqLiteHelper = new SQLiteHelper(context, DATABASE_NAME, null, MYDATABASE_VERSION);
+
+        SQLiteDatabase db = sqLiteHelper.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if(cursor.moveToFirst()){
+            empid = cursor.getString(0);
+        }
+        return empid;
+    }
 }

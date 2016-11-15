@@ -93,8 +93,8 @@ public class SplashActivity extends Activity {
                 Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                 main = new Intent(SplashActivity.this, getLocationActivity.class);
 
-                    if(logged==0){
-                //    if(logged==1){
+                //    if(logged==0){
+                    if(logged==1){
                     startActivity(main);
                 }
                 else{

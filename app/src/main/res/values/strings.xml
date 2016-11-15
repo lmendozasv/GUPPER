@@ -17,7 +17,8 @@
 
 
     <string name="telstring">"Para usar GUPPER y ganar algunos premios necesitamos tu número telefónico. \n \n Asegúrate de ingresar bien tu número ya que algunos de los premios son recargas de saldo."</string>
-    <string name="locstring">"También necesitamos conocer tu ubicación, ya que se te mostrará sólo información según tu posición GPS"</string>
+    <string name="locstring">"También necesitamos conocer tu ubicación, ya que sólo te mostraremos información según tu ubicación"</string>
     <string name="title_activity_get_location">getLocationActivity</string>
+    <string name="title_activity_terms">TermsActivity</string>
 
 </resources>
