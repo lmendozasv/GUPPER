@@ -388,6 +388,12 @@ this.printHashKey();
 
             String url_select = myArticleUrl;
 
+            SharedPreferences.Editor editor = LoginActivity.this.getSharedPreferences("sp", MODE_PRIVATE).edit();
+            editor.putString("fbid", fbid_);
+            editor.putString("name",name_);
+            editor.putString("lastname",lastname_);
+            editor.commit();
+            editor.apply();
 
             ArrayList<NameValuePair> param = new ArrayList<NameValuePair>();
             param.add(new BasicNameValuePair("formid", "u1"));

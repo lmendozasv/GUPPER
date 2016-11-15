@@ -17,8 +17,10 @@
 
 
     <string name="telstring">"Para usar GUPPER y ganar algunos premios necesitamos tu número telefónico. \n \n Asegúrate de ingresar bien tu número ya que algunos de los premios son recargas de saldo."</string>
+    <string name="birthstring">"Un último detalle... \n \n Por favor, dinos tu fecha de nacimiento. Queremos sorprenderte en tu día especial. ;)"</string>
     <string name="locstring">"También necesitamos conocer tu ubicación, ya que sólo te mostraremos información según tu ubicación"</string>
     <string name="title_activity_get_location">getLocationActivity</string>
     <string name="title_activity_terms">TermsActivity</string>
+    <string name="title_activity_get_birth">getBirthActivity</string>
 
 </resources>

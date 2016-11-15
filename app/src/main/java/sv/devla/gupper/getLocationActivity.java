@@ -202,7 +202,7 @@ private void loadByDeparment(){
             //depto muni
             //terminos
 
-            Intent i = new Intent(getLocationActivity.this, TermsActivity.class);
+            Intent i = new Intent(getLocationActivity.this, getBirthActivity.class);
             startActivity(i);
             finish();
 

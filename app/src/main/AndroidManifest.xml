@@ -85,6 +85,10 @@
         <activity
             android:name=".TermsActivity"
             android:label="@string/title_activity_terms"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".getBirthActivity"
+            android:label="@string/title_activity_get_birth"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
