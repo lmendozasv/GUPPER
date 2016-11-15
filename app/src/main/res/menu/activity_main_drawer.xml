@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navperfil"
+            android:icon="@drawable/i_myprofile"
+            android:title="Mi perfil" />
+        <item
+            android:id="@+id/navreportar"
+            android:icon="@drawable/i_report"
+            android:title="Reportar precios" />
+        <item
+            android:id="@+id/navsoliitar"
+            android:icon="@drawable/i_request"
+            android:title="Consultar un precio" />
+        <item
+            android:id="@+id/navvalidar"
+            android:icon="@drawable/i_validate"
+            android:title="Validar reportes" />
+        <item
+            android:id="@+id/navpremios"
+            android:icon="@drawable/i_prizes"
+            android:title="Premios y recompensas" />
+
+    </group>
+
+    <item android:title="Soporte">
+        <menu>
+            <item
+                android:id="@+id/navcontacto"
+                android:icon="@drawable/i_help"
+                android:title="Contacto" />
+            <item
+                android:id="@+id/navfaq"
+                android:icon="@drawable/i_faq"
+                android:title="Preguntas frecuentes" />
+        </menu>
+    </item>
+
+</menu>

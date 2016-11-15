@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GUPPER</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_sign_in">Login</string>
+    <string name="app_id">1236232439766523</string>
+    <string name="title_activity_bye">byeActivity</string>
+    <string name="title_activity_home_activty">HomeActivty</string>
+
+
+    <string name="banner_home_footer">ca-app-pub-0664570763252260/3326522424</string>
+    <string name="interstitial_full_screen">ca-app-pub-0664570763252260/1769900428</string>
+    <string name="title_activity_get_phone">getPhoneActivity</string>
+
+
+    <string name="telstring">"Para usar GUPPER y ganar algunos premios necesitamos tu número telefónico. \n \n Asegúrate de ingresar bien tu número ya que algunos de los premios son recargas de saldo."</string>
+    <string name="locstring">"También necesitamos conocer tu ubicación, ya que se te mostrará sólo información según tu posición GPS"</string>
+    <string name="title_activity_get_location">getLocationActivity</string>
+
+</resources>
