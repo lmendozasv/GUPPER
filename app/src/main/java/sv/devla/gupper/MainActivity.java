@@ -26,17 +26,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
-import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import org.lucasr.twowayview.TwoWayView;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -48,13 +52,17 @@ import static android.R.attr.scaleWidth;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private static final float BLUR_RADIUS = 25f;
-    private SliderLayout mDemoSlider;
+    //private SliderLayout mDemoSlider;
     //private SliderLayout mDemoSlider2;
 //    private SliderLayout mDemoSlider3;
 //    private SliderLayout mDemoSlider4;
 
     private ExplosionField mExplosionField;
     private AdView mAdView;
+
+
+    private ListView lv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +129,7 @@ public class MainActivity extends AppCompatActivity
 
         getSupportActionBar().setTitle("");
 
-        mDemoSlider = (SliderLayout)this.findViewById(R.id.slider);
+       // mDemoSlider = (SliderLayout)this.findViewById(R.id.slider);
 
         //mDemoSlider2 = (SliderLayout)this.findViewById(R.id.slider2);
 //        mDemoSlider3 = (SliderLayout)this.findViewById(R.id.slider3);
@@ -175,7 +183,7 @@ public class MainActivity extends AppCompatActivity
             textSliderView.getBundle()
                     .putString("extra", name);
 
-            mDemoSlider.addSlider(textSliderView);
+            //mDemoSlider.addSlider(textSliderView);
 
 
 //            mDemoSlider3.addSlider(textSliderView);
@@ -206,10 +214,10 @@ public class MainActivity extends AppCompatActivity
 
         //end
 
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.FlipHorizontal);
-        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(8000);
+        //mDemoSlider.setPresetTransformer(SliderLayout.Transformer.FlipHorizontal);
+        //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        //mDemoSlider.setDuration(8000);
 
 
 
@@ -244,13 +252,13 @@ public class MainActivity extends AppCompatActivity
         Button slider3 =null;
         Button slider4 =null;
 
-        slider2=(Button)this.findViewById(R.id.slider2);
-        slider3=(Button)this.findViewById(R.id.slider3);
-        slider4=(Button)this.findViewById(R.id.slider4);
+       // slider2=(Button)this.findViewById(R.id.slider2);
+       // slider3=(Button)this.findViewById(R.id.slider3);
+       // slider4=(Button)this.findViewById(R.id.slider4);
 
-        slider2.setCompoundDrawablesWithIntrinsicBounds(null, icon, null, null);
-        slider3.setCompoundDrawablesWithIntrinsicBounds(null, icon3, null, null);
-        slider4.setCompoundDrawablesWithIntrinsicBounds(null, icon2, null, null);
+        //slider2.setCompoundDrawablesWithIntrinsicBounds(null, icon, null, null);
+        //slider3.setCompoundDrawablesWithIntrinsicBounds(null, icon3, null, null);
+        //slider4.setCompoundDrawablesWithIntrinsicBounds(null, icon2, null, null);
 
 
 
@@ -259,7 +267,7 @@ public class MainActivity extends AppCompatActivity
                 (int)(drawable.getIntrinsicHeight()*0.8));
         ScaleDrawable sd = new ScaleDrawable(drawable, 0, scaleWidth, scaleHeight);
 
-        slider2.setCompoundDrawables(null, sd.getDrawable(), null, null);
+//        slider2.setCompoundDrawables(null, sd.getDrawable(), null, null);
 
 
 
@@ -276,6 +284,57 @@ public class MainActivity extends AppCompatActivity
                 .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
                 .build();
         mAdView.loadAd(adRequest);
+
+
+      //  carouselView = (CarouselView) findViewById(R.id.carouselView);
+       // carouselView.setPageCount(sampleImages.length);
+
+//        carouselView.setImageListener(imageListener);
+//        lv = (ListView) findViewById(R.id.lvItems);
+        List<String> your_array_list = new ArrayList<>();
+        your_array_list.add("foo");
+        your_array_list.add("bar");
+        your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");your_array_list.add("foo");
+        your_array_list.add("bar");
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                your_array_list );
+
+      //  lv.setAdapter(arrayAdapter);
+        ArrayAdapter<String> aItems = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, your_array_list);
+        TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
+        lvTest.setAdapter(aItems);
+
+
+
+
+
     }
 
     public Bitmap makeTransparent(Bitmap bitmap, int opacity) {
@@ -287,6 +346,8 @@ public class MainActivity extends AppCompatActivity
         canvas.drawColor(colour, PorterDuff.Mode.DST_IN);
         return mutableBitmap;
     }
+
+
 
     public Bitmap blur(Bitmap image) {
         if (null == image) return null;

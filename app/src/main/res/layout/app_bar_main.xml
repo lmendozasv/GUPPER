@@ -18,9 +18,18 @@
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
             android:layout_width="match_parent"
-            app:contentInsetStart="0dp"
+
             android:layout_height="?attr/actionBarSize"
             android:background="#424242"
+
+            android:contentInsetLeft="-10dp"
+            android:contentInsetStart="-10dp"
+            app:contentInsetLeft="-10dp"
+            app:contentInsetStart="-10dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="20dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
             >
 
 
@@ -32,13 +41,25 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="GUPPER"
                 fontPath="fonts/hm.ttf"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:id="@+id/textView2"
                 android:textSize="20dip"
                 android:textColor="#ffffff"
+
                 android:layout_above="@+id/imgLogo" />
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 GUPS"
+                fontPath="fonts/hm.ttf"
+                android:layout_gravity="right"
+                android:id="@+id/textView2"
+                android:textSize="15dip"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dip"
+                android:layout_above="@+id/imgLogo" />
 
         </android.support.v7.widget.Toolbar>
 

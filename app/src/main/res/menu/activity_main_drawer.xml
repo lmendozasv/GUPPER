@@ -12,7 +12,7 @@
             android:title="Reportar precios" />
         <item
             android:id="@+id/navsoliitar"
-            android:icon="@drawable/i_request"
+            android:icon="@drawable/i_help"
             android:title="Consultar un precio" />
         <item
             android:id="@+id/navvalidar"
@@ -29,12 +29,9 @@
         <menu>
             <item
                 android:id="@+id/navcontacto"
-                android:icon="@drawable/i_help"
+                android:icon="@drawable/ic_mail"
                 android:title="Contacto" />
-            <item
-                android:id="@+id/navfaq"
-                android:icon="@drawable/i_faq"
-                android:title="Preguntas frecuentes" />
+
         </menu>
     </item>
 
