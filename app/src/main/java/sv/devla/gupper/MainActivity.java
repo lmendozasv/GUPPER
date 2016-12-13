@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity
         items.add("Item 2");
         items.add("Item 3");
         items.add("Item 4");
-
+//https://guides.codepath.com/android/implementing-a-horizontal-listview-guide
 
         ArrayAdapter<String> aItems = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, your_array_list);
         TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
