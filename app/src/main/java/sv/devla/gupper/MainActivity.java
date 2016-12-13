@@ -292,31 +292,8 @@ public class MainActivity extends AppCompatActivity
 //        carouselView.setImageListener(imageListener);
 //        lv = (ListView) findViewById(R.id.lvItems);
         List<String> your_array_list = new ArrayList<>();
-        your_array_list.add("foo");
-        your_array_list.add("bar");
-        your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");your_array_list.add("foo");
-        your_array_list.add("bar");
+        your_array_list.add("foo 1");
+        your_array_list.add("bar 1");
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
@@ -327,10 +304,16 @@ public class MainActivity extends AppCompatActivity
                 your_array_list );
 
       //  lv.setAdapter(arrayAdapter);
+        ArrayList<String> items = new ArrayList<String>();
+        items.add("Item 1");
+        items.add("Item 2");
+        items.add("Item 3");
+        items.add("Item 4");
+
+
         ArrayAdapter<String> aItems = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, your_array_list);
         TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
         lvTest.setAdapter(aItems);
-
 
 
 
