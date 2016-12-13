@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/lblprecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblfechaprueba"
+        android:layout_toRightOf="@+id/lblfechaprueba"
+        android:gravity="left"
+        android:text="0.00"
+        android:textColor="#FFFFFF"
+         />
+
+    <TextView
+        android:id="@+id/CustomFontTextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblprecio"
+        android:layout_toRightOf="@+id/lblprecio"
+        android:gravity="left"
+        android:text=" €"
+        android:textColor="#FFFFFF"
+         />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/View01"
+        android:layout_alignLeft="@+id/View01"
+        android:layout_alignTop="@+id/lblfechaprueba"
+        android:layout_toLeftOf="@+id/textView1"
+        android:scaleType="fitXY"
+        android:src="@drawable/i_gps" />
+
+    <TextView
+        android:id="@+id/lblfechaprueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/View01"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:gravity="left"
+        android:text="Manolo Barredo"
+        android:textColor="#FFFFFF"
+         />
+
+    <TextView
+        android:id="@+id/CustomFontTextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/lblfechaprueba"
+        android:layout_below="@+id/lblfechaprueba"
+        android:gravity="left"
+        android:text="Global Rent Club y mas"
+        android:textColor="#FFFFFF"
+        />
+
+    <Button
+        android:id="@+id/btn_ver_club"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/CustomFontTextView01"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Contactar" />
+
+    <View
+        android:id="@+id/View01"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_alignBottom="@+id/btn_ver_club"
+        android:layout_alignRight="@+id/btn_ver_club"
+        android:background="#045FB4" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:text="." />
+
+</RelativeLayout>
