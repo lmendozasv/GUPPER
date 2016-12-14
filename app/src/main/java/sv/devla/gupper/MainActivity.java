@@ -18,6 +18,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -271,8 +272,8 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        mExplosionField = ExplosionField.attach2Window(this);
-        addListener(findViewById(R.id.root));
+//        mExplosionField = ExplosionField.attach2Window(this);
+//        addListener(findViewById(R.id.root));
 
 
          String android_id = Secure.getString(this.getContentResolver(),
@@ -316,6 +317,13 @@ public class MainActivity extends AppCompatActivity
         lvTest.setAdapter(aItems);
 
 
+
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setLogo(R.drawable.ic_location);
+        actionBar.setDisplayUseLogoEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
 
 
     }

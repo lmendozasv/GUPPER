@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="devlasolutions.com.gup.MainActivity">
+    tools:context="sv.devla.gupper.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,7 +20,8 @@
             android:layout_width="match_parent"
 
             android:layout_height="?attr/actionBarSize"
-            android:background="#424242"
+
+            android:background="#045FB4"
 
             android:contentInsetLeft="-10dp"
             android:contentInsetStart="-10dp"
@@ -42,21 +43,21 @@
                 android:text="GUPPER"
                 fontPath="fonts/hm.ttf"
                 android:layout_gravity="left"
-                android:id="@+id/textView2"
+                android:id="@+id/textView2h"
                 android:textSize="20dip"
                 android:textColor="#ffffff"
-
                 android:layout_above="@+id/imgLogo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="0 GUPS"
+                android:text="999,999 GUPS"
                 fontPath="fonts/hm.ttf"
                 android:layout_gravity="right"
                 android:id="@+id/textView2"
-                android:textSize="15dip"
+                android:textSize="14dp"
+                android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:layout_marginRight="20dip"
                 android:layout_above="@+id/imgLogo" />
