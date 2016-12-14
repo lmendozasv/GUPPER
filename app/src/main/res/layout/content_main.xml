@@ -147,20 +147,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-
-            <org.lucasr.twowayview.TwoWayView
-                android:id="@+id/lvItems"
-                style="@style/TwoWayView"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/horizontal_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="150dip"
-                android:drawSelectorOnTop="false"
-                tools:context=".MainActivity"
                 android:layout_marginTop="10dip"
                 android:background="#cc000000"
                 android:layout_below="@+id/tx000"
                 android:paddingLeft="10dip"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -193,17 +190,9 @@
                 android:paddingBottom="5dip"
                 android:paddingTop="15dip"
                 android:textColor="#ffffff"
-                android:layout_below="@+id/lvItems"
+                android:layout_below="@+id/horizontal_recycler_view"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
-
-
-
-
-
-
-
-
 
             <!-- TEST -->
             <HorizontalScrollView
@@ -215,6 +204,7 @@
                 android:layout_below="@id/textView5"
                 android:measureAllChildren="false"
                 android:scrollbars="none" >
+
                 <LinearLayout
                     android:id="@+id/innerLay"
                     android:layout_width="wrap_content"
