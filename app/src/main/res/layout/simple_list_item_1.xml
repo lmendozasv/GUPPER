@@ -3,6 +3,7 @@
     android:id="@android:id/text1"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+
     android:textAppearance="?android:attr/textAppearanceListItemSmall"
     android:layout_marginRight="100dip"
     android:gravity="center_vertical" />

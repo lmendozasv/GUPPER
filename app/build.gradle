@@ -72,4 +72,8 @@ dependencies {
     compile 'org.lucasr.twowayview:twowayview:0.1.4'
 
 
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+
 }

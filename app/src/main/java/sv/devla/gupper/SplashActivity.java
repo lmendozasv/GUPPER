@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class SplashActivity extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 1500;
+    private static int SPLASH_TIME_OUT = 100;
     Intent main=null;
     String zipid,postcode,cityname;
     private getDetails mAuthTask = null;
@@ -53,6 +53,7 @@ public class SplashActivity extends Activity {
             SplashActivity.this.startAct();
         }
         else{
+            SplashActivity.this.startAct();// TO-DO quitar
             Log.d("GETFROMSERVER","GET FROM SERVER");
             mAuthTask = new getDetails("","");
 
