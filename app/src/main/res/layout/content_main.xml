@@ -151,10 +151,12 @@
                 android:id="@+id/horizontal_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="150dip"
-                android:layout_marginTop="10dip"
+                android:foregroundGravity="center"
+                android:layout_marginTop="5dip"
                 android:background="#cc000000"
                 android:layout_below="@+id/tx000"
                 android:paddingLeft="10dip"
+
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 />
@@ -187,7 +189,7 @@
                 android:paddingLeft="15dip"
                 android:id="@+id/textView5"
                 android:textSize="20dip"
-                android:paddingBottom="5dip"
+                android:paddingBottom="1dip"
                 android:paddingTop="15dip"
                 android:textColor="#ffffff"
                 android:layout_below="@+id/horizontal_recycler_view"

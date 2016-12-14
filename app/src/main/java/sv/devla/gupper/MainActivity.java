@@ -312,9 +312,9 @@ public class MainActivity extends AppCompatActivity
 
         List<Data> data = new ArrayList<>();
 
-        data.add(new Data( R.drawable.ic_cancel, "Image 1"));
+        data.add(new Data( R.drawable.ic_bk2, "Image 1"));
         data.add(new Data( R.drawable.ic_cancel, "Image 2"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 3"));
+        data.add(new Data( R.drawable.ic_location, "Image 3"));
         data.add(new Data( R.drawable.ic_cancel, "Image 1"));
         data.add(new Data( R.drawable.ic_cancel, "Image 2"));
         data.add(new Data( R.drawable.ic_cancel, "Image 3"));
