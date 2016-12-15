@@ -38,6 +38,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.google.android.gms.ads.AdRequest;
@@ -159,6 +161,17 @@ public class MainActivity extends AppCompatActivity
         horizontal_recycler_view.setLayoutManager(horizontalLayoutManager);
         horizontal_recycler_view.setAdapter(horizontalAdapter);
 
+
+
+
+
+        YoYo.with(Techniques.Shake)
+                .duration(7000)
+                .playOn(findViewById(R.id.editText2));
+        //
+        YoYo.with(Techniques.Shake)
+                .duration(7000)
+                .playOn(findViewById(R.id.textView2));
     }
 
     public Bitmap makeTransparent(Bitmap bitmap, int opacity) {

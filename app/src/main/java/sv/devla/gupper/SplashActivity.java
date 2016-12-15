@@ -10,6 +10,9 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -19,7 +22,7 @@ import java.util.ArrayList;
 public class SplashActivity extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 100;
+    private static int SPLASH_TIME_OUT = 700;
     Intent main=null;
     String zipid,postcode,cityname;
     private getDetails mAuthTask = null;
@@ -36,6 +39,9 @@ public class SplashActivity extends Activity {
 
 
 
+        YoYo.with(Techniques.Wobble)
+                .duration(700)
+                .playOn(findViewById(R.id.textView2));
 
 
         mySQLiteAdapter = new SQLiteAdapter(SplashActivity.this);

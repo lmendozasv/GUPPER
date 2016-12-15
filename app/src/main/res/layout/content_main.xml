@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/ic_back_ss"
+
     android:id="@+id/root"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="sv.devla.gupper.MainActivity"
     tools:showIn="@layout/app_bar_main"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     >
+
+
     <TextView
         android:id="@+id/headline"
         android:layout_width="wrap_content"
@@ -183,207 +185,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Acciones"
+                android:text="OBTENER MONEDAS"
                 android:background="#80000000"
                 android:layout_marginTop="15dip"
-                android:layout_gravity="left"
+
                 android:paddingLeft="15dip"
                 android:id="@+id/textView5"
-                android:textSize="20dip"
-                android:paddingBottom="1dip"
-                android:paddingTop="15dip"
+
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+
                 android:textColor="#ffffff"
+
+                android:gravity="center_vertical"
                 android:layout_below="@+id/horizontal_recycler_view"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
-            <!-- TEST -->
-            <HorizontalScrollView
-                android:id="@+id/hsv"
-                android:layout_width="fill_parent"
-                android:layout_height="50dip"
-                android:background="#db32"
-                android:fillViewport="true"
-                android:layout_below="@id/textView5"
-                android:measureAllChildren="false"
-                android:scrollbars="none" >
-
-                <LinearLayout
-                    android:id="@+id/innerLay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal" >
-                    <LinearLayout
-                        android:id="@+id/asthma_action_plan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/controlled_medication"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/as_needed_medication"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/rescue_medication"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/your_symptoms"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/your_triggers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/wheeze_rate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/peak_flow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-                        <RelativeLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent" >
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_expand" />
-                            <TextView
-                                android:layout_width="0.2dp"
-                                android:layout_height="fill_parent"
-                                android:layout_alignParentRight="true"
-                                android:background="@drawable/ic_expand" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-
-
             <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
-                <ImageView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/textView5"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="A Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dip"
+                    android:layout_marginTop="0dip"
+                    android:id="@+id/button2"
+                    android:layout_below="@+id/textView7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/button3"
+                    android:layout_toLeftOf="@+id/button3" />
+
+                <Button
+                    android:text="B Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dip"
+                    android:id="@+id/button3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:layout_toEndOf="@+id/textView7" />
+
+                <TextView
+                    android:text="."
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_expand" />
-                <TextView
-                    android:layout_width="0.2dp"
-                    android:layout_height="fill_parent"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/ic_expand" />
+                    android:textSize="2dip"
+                    android:id="@+id/textView7"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+
             </RelativeLayout>
+
+            <!-- TEST -->
+
+
             <!-- FIN -->
         </RelativeLayout>
     </ScrollView>
