@@ -153,7 +153,7 @@
                 android:layout_height="150dip"
                 android:foregroundGravity="center"
                 android:layout_marginTop="5dip"
-                android:background="#cc000000"
+
                 android:layout_below="@+id/tx000"
                 android:paddingLeft="10dip"
 
