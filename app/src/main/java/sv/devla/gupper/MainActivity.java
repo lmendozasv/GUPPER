@@ -312,15 +312,21 @@ public class MainActivity extends AppCompatActivity
 
         List<Data> data = new ArrayList<>();
 
-        data.add(new Data( R.drawable.ic_bk2, "Image 1"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 2"));
-        data.add(new Data( R.drawable.ic_location, "Image 3"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 1"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 2"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 3"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 1"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 2"));
-        data.add(new Data( R.drawable.ic_cancel, "Image 3"));
+        data.add(new Data( R.drawable.ic_aceite, "ACEITES"));
+        data.add(new Data( R.drawable.ic_huevosycarnes, "HUEVOS Y CARNES"));
+        data.add(new Data( R.drawable.ic_pan, "PAN"));
+        data.add(new Data( R.drawable.ic_frutas, "FRUTAS"));
+        data.add(new Data( R.drawable.ic_granos, "GRANOS BÁSICOS"));
+        data.add(new Data( R.drawable.ic_harinas, "HARINAS"));
+        data.add(new Data( R.drawable.ic_lacteosyquesos, "LÁCTEOS"));
+        data.add(new Data( R.drawable.ic_verduras, "VERDURAS"));
+        data.add(new Data( R.drawable.ic_pastas, "PASTAS"));
+        data.add(new Data( R.drawable.ic_margarinasymantecas, "MARGARINAS Y MANTECAS"));
+        data.add(new Data( R.drawable.ic_atun, "ATÚN"));
+        data.add(new Data( R.drawable.ic_sardinas, "SARDINAS"));
+        data.add(new Data( R.drawable.ic_bebidas, "BEBIDAS"));
+        data.add(new Data( R.drawable.ic_salsas, "SALSAS"));
+        data.add(new Data( R.drawable.ic_limpieza, "LIMPIEZA Y ASEO PERSONAL"));
 
 
         return data;
