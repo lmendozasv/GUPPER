@@ -208,7 +208,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:text="A Button"
+                    android:text="REPORTAR PRECIOS"
                     android:layout_width="wrap_content"
                     android:layout_height="100dip"
                     android:layout_marginTop="0dip"
@@ -220,7 +220,7 @@
                     android:layout_toLeftOf="@+id/button3" />
 
                 <Button
-                    android:text="B Button"
+                    android:text="PUNTUAR REPORTES"
                     android:layout_width="wrap_content"
                     android:layout_height="100dip"
                     android:id="@+id/button3"
