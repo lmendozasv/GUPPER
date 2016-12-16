@@ -28,6 +28,9 @@
         android:layout_height="wrap_content"
         android:background="#805F04B4"
         android:id="@+id/barrabusqueda"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
         >
         <EditText
             android:layout_width="fill_parent"

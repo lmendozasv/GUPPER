@@ -18,11 +18,8 @@
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
             android:layout_width="match_parent"
-
             android:layout_height="?attr/actionBarSize"
-
             android:background="#045FB4"
-
             android:contentInsetLeft="-10dp"
             android:contentInsetStart="-10dp"
             app:contentInsetLeft="-10dp"
@@ -33,31 +30,45 @@
             app:contentInsetEnd="0dp"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text=""
-                fontPath="fonts/hm.ttf"
-                android:layout_gravity="left"
-                android:id="@+id/textView2h"
-                android:textSize="20dip"
-                android:textColor="#ffffff"
-                android:layout_above="@+id/imgLogo" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/toolBarTv"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="0 MONEDAS"
-                fontPath="fonts/hm.ttf"
-                android:layout_gravity="end"
-                android:id="@+id/textView2"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:layout_marginRight="20dip"
-                android:layout_above="@+id/imgLogo" />
+                android:text="@string/app_name"
+                android:gravity="right"
+                android:textSize="18dp">
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_gravity="right"
+                    android:id="@+id/textView2h"
+                    android:src="@drawable/ic_coins"
+                    android:layout_above="@+id/imgLogo"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0 MONEDAS"
+                    fontPath="fonts/hm.ttf"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="end"
+                    android:id="@+id/textView2"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/textView2h"
+                    android:layout_toStartOf="@+id/textView2h" />
+
+            </RelativeLayout>
 
         </android.support.v7.widget.Toolbar>
 
