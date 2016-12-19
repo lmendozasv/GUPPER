@@ -66,11 +66,8 @@ public class MainActivity extends AppCompatActivity
     private ExplosionField mExplosionField;
     private AdView mAdView;
 
-    RecyclerView horizontal_recycler_view;
-    HorizontalAdapter horizontalAdapter;
-    private List<Data> data;
 
-
+    ArrayList<SectionDataModel> allSampleData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +132,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-         String android_id = Secure.getString(this.getContentResolver(),
+        String android_id = Secure.getString(this.getContentResolver(),
                 Secure.ANDROID_ID);
 
 
@@ -150,28 +147,34 @@ public class MainActivity extends AppCompatActivity
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(false);
 
-//horizontal
-        horizontal_recycler_view= (RecyclerView) findViewById(R.id.horizontal_recycler_view);
-        data = fill_with_data();
 
 
-        horizontalAdapter=new HorizontalAdapter(data, getApplication());
-
-        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
-        horizontal_recycler_view.setLayoutManager(horizontalLayoutManager);
-        horizontal_recycler_view.setAdapter(horizontalAdapter);
-
-
-
-
-
-        YoYo.with(Techniques.Shake)
-                .duration(7000)
-                .playOn(findViewById(R.id.editText2));
+//        YoYo.with(Techniques.Shake)
+        //               .duration(7000)
+        //               .playOn(findViewById(R.id.editText2));
         //
         YoYo.with(Techniques.Shake)
                 .duration(7000)
                 .playOn(findViewById(R.id.textView2));
+
+
+
+
+        allSampleData = new ArrayList<SectionDataModel>();
+
+        createDummyData();
+
+        RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+        my_recycler_view.setHasFixedSize(true);
+
+        RecyclerViewDataAdapter adapter = new RecyclerViewDataAdapter(this, allSampleData);
+
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        my_recycler_view.setAdapter(adapter);
+
+
     }
 
     public Bitmap makeTransparent(Bitmap bitmap, int opacity) {
@@ -263,144 +266,42 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void addListener(View root) {
-        if (root instanceof ViewGroup) {
-            ViewGroup parent = (ViewGroup) root;
-            for (int i = 0; i < parent.getChildCount(); i++) {
-                addListener(parent.getChildAt(i));
+    public void createDummyData() {
+        for (int i = 1; i <= 1; i++) {
 
-            }
-        } else {
-            root.setClickable(true);
-            root.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mExplosionField.explode(v);
+            SectionDataModel dm = new SectionDataModel();
 
-                    v.setOnClickListener(null);
+            dm.setHeaderTitle("Section " + i);
 
+            ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
 
-                    //start
-                    Timer timer = new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
+            singleItem.add(new SingleItemModel("ACEITES" , "URL " ));
+            singleItem.add(new SingleItemModel("HUEVOS Y CARNES" , "URL " ));
+            singleItem.add(new SingleItemModel("PAN" , "URL " ));
+            singleItem.add(new SingleItemModel("FRUTAS" , "URL " ));
+            singleItem.add(new SingleItemModel("GRANOS BÁSICOS" , "URL " ));
 
-                                    Intent intent = null;
-                                    intent = new Intent(MainActivity.this, LoginActivity.class);
-                                    startActivity(intent);
-                                    //MainActivity.this.finish();
+            singleItem.add(new SingleItemModel("HARINAS" , "URL " ));
+            singleItem.add(new SingleItemModel("LÁCTEOS" , "URL " ));
+            singleItem.add(new SingleItemModel("VERDURAS" , "URL " ));
+            singleItem.add(new SingleItemModel("PASTAS" , "URL " ));
+            singleItem.add(new SingleItemModel("MARGARINAS Y MANTECAS" , "URL " ));
 
 
-                                }
-                            });
-                        }
-                    }, 1000); // End of your timer code.
-                    //end
-//                    View root = findViewById(R.id.root);
-//                    reset(root);
-//                    addListener(root);
-//                    mExplosionField.clear();
-                }
-            });
-        }
-    }
+            singleItem.add(new SingleItemModel("ATÚN" , "URL " ));
+            singleItem.add(new SingleItemModel("SARDINAS" , "URL " ));
+            singleItem.add(new SingleItemModel("BEBIDAS" , "URL " ));
+            singleItem.add(new SingleItemModel("SALSAS" , "URL " ));
+            singleItem.add(new SingleItemModel("LIMPIEZA Y ASEO PERSONAL" , "URL " ));
 
-    private void reset(View root) {
-        if (root instanceof ViewGroup) {
-            ViewGroup parent = (ViewGroup) root;
-            for (int i = 0; i < parent.getChildCount(); i++) {
-                reset(parent.getChildAt(i));
-            }
-        } else {
-            root.setScaleX(1);
-            root.setScaleY(1);
-            root.setAlpha(1);
-        }
-    }
-    public List<Data> fill_with_data() {
+            //for (int j = 0; j <= 5; j++) {
+            //    singleItem.add(new SingleItemModel("Item " , "URL " ));
+            //}
 
-        List<Data> data = new ArrayList<>();
+            dm.setAllItemsInSection(singleItem);
 
-        data.add(new Data( R.drawable.ic_aceite, "ACEITES"));
-        data.add(new Data( R.drawable.ic_huevosycarnes, "HUEVOS Y CARNES"));
-        data.add(new Data( R.drawable.ic_pan, "PAN"));
-        data.add(new Data( R.drawable.ic_frutas, "FRUTAS"));
-        data.add(new Data( R.drawable.ic_granos, "GRANOS BÁSICOS"));
-        data.add(new Data( R.drawable.ic_harinas, "HARINAS"));
-        data.add(new Data( R.drawable.ic_lacteosyquesos, "LÁCTEOS"));
-        data.add(new Data( R.drawable.ic_verduras, "VERDURAS"));
-        data.add(new Data( R.drawable.ic_pastas, "PASTAS"));
-        data.add(new Data( R.drawable.ic_margarinasymantecas, "MARGARINAS Y MANTECAS"));
-        data.add(new Data( R.drawable.ic_atun, "ATÚN"));
-        data.add(new Data( R.drawable.ic_sardinas, "SARDINAS"));
-        data.add(new Data( R.drawable.ic_bebidas, "BEBIDAS"));
-        data.add(new Data( R.drawable.ic_salsas, "SALSAS"));
-        data.add(new Data( R.drawable.ic_limpieza, "LIMPIEZA Y ASEO PERSONAL"));
+            allSampleData.add(dm);
 
-
-        return data;
-    }
-
-    public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.MyViewHolder> {
-
-
-        List<Data> horizontalList = Collections.emptyList();
-        Context context;
-
-
-        public HorizontalAdapter(List<Data> horizontalList, Context context) {
-            this.horizontalList = horizontalList;
-            this.context = context;
-        }
-
-
-        public class MyViewHolder extends RecyclerView.ViewHolder {
-
-            ImageView imageView;
-            TextView txtview;
-            public MyViewHolder(View view) {
-                super(view);
-                imageView=(ImageView) view.findViewById(R.id.imageview);
-                txtview=(TextView) view.findViewById(R.id.txtview);
-            }
-        }
-
-
-
-        @Override
-        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.vertical_menu, parent, false);
-
-            return new MyViewHolder(itemView);
-        }
-
-        @Override
-        public void onBindViewHolder(final MyViewHolder holder, final int position) {
-
-            holder.imageView.setImageResource(horizontalList.get(position).imageId);
-            holder.txtview.setText(horizontalList.get(position).txt);
-
-            holder.imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-
-                public void onClick(View v) {
-                    String list = horizontalList.get(position).txt.toString();
-                    Toast.makeText(MainActivity.this, list, Toast.LENGTH_SHORT).show();
-                }
-
-            });
-
-        }
-
-
-        @Override
-        public int getItemCount()
-        {
-            return horizontalList.size();
         }
     }
 }
