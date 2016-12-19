@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_back_ss"
+        android:src="@drawable/ic_money"
         android:scaleType="fitXY"
         android:id="@+id/imageView3" />
 

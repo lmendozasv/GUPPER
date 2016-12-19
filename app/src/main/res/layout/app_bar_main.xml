@@ -19,7 +19,9 @@
             android:paddingRight="0dp"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#045FB4"
+            android:background="@drawable/ic_money_bar"
+
+
             android:contentInsetLeft="-10dp"
             android:contentInsetStart="-10dp"
             app:contentInsetLeft="-10dp"
@@ -28,6 +30,7 @@
             android:contentInsetEnd="20dp"
             app:contentInsetRight="0dp"
             app:contentInsetEnd="0dp"
+
             >
 
 
@@ -55,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="0 MONEDAS"
+                    android:text="10 MONEDAS"
                     fontPath="fonts/hm.ttf"
                     android:gravity="center_vertical"
                     android:layout_gravity="end"
