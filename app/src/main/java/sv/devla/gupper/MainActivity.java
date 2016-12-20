@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ScaleDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings.Secure;
 import android.renderscript.Allocation;
@@ -29,6 +30,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -58,6 +60,8 @@ import tyrantgit.explosionfield.ExplosionField;
 
 import static android.R.attr.scaleHeight;
 import static android.R.attr.scaleWidth;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,6 +80,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("");
+        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,9 +89,9 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        */
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this,
@@ -174,7 +179,58 @@ public class MainActivity extends AppCompatActivity
 
         my_recycler_view.setAdapter(adapter);
 
+        final CustomAutoCompleteView etd = (CustomAutoCompleteView) findViewById(R.id.etautobusqueda);
 
+
+
+        etd.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.i("click", "onMtouch");
+
+
+
+        MainActivity.this.onClick(v);
+                //Intent i = new Intent(MainActivity.this, SearchActivity.class);
+                 //   startActivity(i);
+
+              //  finish();
+
+
+                //etd.setFocusable(true);
+                //etd.requestFocus();
+                //etd.setSelection(etd.getText().length());
+
+                return false;
+            }
+        });
+
+    }
+
+
+
+    public void onClick(View view) {
+        //View imageView = findViewById(R.id.imageView);
+        View textView = findViewById(R.id.etautobusqueda);
+        //View button = findViewById(R.id.button);
+
+        Intent intent = new Intent(this, SearchActivity.class);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            textView.setTransitionName(getString(R.string.activity_text_trans));
+//            button.setTransitionName(getString(R.string.activity_mixed_trans));
+
+  //          Pair<View, String> pair1 = Pair.create(imageView, imageView.getTransitionName());
+            Pair<View, String> pair2 = Pair.create(textView, textView.getTransitionName());
+    //        Pair<View, String> pair3 = Pair.create(button, button.getTransitionName());
+            ActivityOptionsCompat options = ActivityOptionsCompat.
+                    makeSceneTransitionAnimation(this, pair2);
+            startActivity(intent, options.toBundle());
+        }
+        else {
+            startActivity(intent);
+        }
     }
 
     public Bitmap makeTransparent(Bitmap bitmap, int opacity) {

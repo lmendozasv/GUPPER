@@ -37,12 +37,16 @@ public class SectionListDataAdapter extends RecyclerView.Adapter<SectionListData
         holder.tvTitle.setText(singleItem.getName());
 
 
-       /* Glide.with(mContext)
+       /*
+
+       Glide.with(mContext)
                 .load(feedItem.getImageURL())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerCrop()
                 .error(R.drawable.bg)
-                .into(feedListRowHolder.thumbView);*/
+                .into(feedListRowHolder.thumbView);
+
+                */
     }
 
     @Override
