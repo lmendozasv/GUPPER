@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, SearchActivity.class);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            textView.setTransitionName(getString(R.string.activity_text_trans));
+            textView.setTransitionName(getString(R.string.activity_mixed_trans));
 //            button.setTransitionName(getString(R.string.activity_mixed_trans));
 
   //          Pair<View, String> pair1 = Pair.create(imageView, imageView.getTransitionName());

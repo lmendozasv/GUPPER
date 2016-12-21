@@ -5,38 +5,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_back"
     tools:context="sv.devla.gupper.SearchActivity">
 
 
 
-    <sv.devla.gupper.CustomAutoCompleteView
+
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="40dip"
-        android:padding="5dip"
-        android:layout_marginTop="10dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:hint="¿Qué es lo que buscas?"
-        android:paddingStart="50dip"
-        android:singleLine="true"
-        android:paddingEnd="35dip"
-        android:completionThreshold="1"
-        android:nextFocusUp="@+id/etautobusqueda"
-        android:nextFocusLeft="@+id/etautobusqueda"
+        android:layout_height="wrap_content"
+        android:background="#e6045FB4"
+        android:id="@+id/barrabusqueda"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+        <sv.devla.gupper.CustomAutoCompleteView
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:padding="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:hint="¿Qué es lo que buscas?"
+            android:paddingStart="50dip"
+            android:singleLine="true"
+            android:paddingEnd="35dip"
+            android:completionThreshold="1"
+            android:nextFocusUp="@+id/etautobusqueda"
+            android:nextFocusLeft="@+id/etautobusqueda"
 
 
-        android:background="@drawable/rounded"
-        android:layout_marginBottom="6dip"
-        android:id="@+id/etautobusqueda" />
+            android:background="@drawable/rounded"
+            android:layout_marginBottom="6dip"
+            android:id="@+id/etautobusqueda" />
+
+        <ImageButton
+            android:id="@+id/buttone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:background="@android:color/transparent"
+            android:text="Button"
+
+            android:scaleType="fitCenter"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_alignBottom="@+id/buttone12"
+            android:layout_alignTop="@+id/buttone12" />
+
+
+        <ImageButton
+            android:id="@+id/buttone12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+
+            android:background="@android:color/transparent"
+            android:text="Button"
+            android:layout_alignTop="@+id/etautobusqueda"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+
+            android:layout_marginLeft="15dip"
+
+            android:layout_alignBottom="@+id/etautobusqueda"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <View android:id="@+id/separator"
+        android:background="#01579B"
+        android:layout_width = "fill_parent"
+        android:layout_height="1.5dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignEnd="@+id/separatosr"
+        android:layout_below="@+id/barrabusqueda" />
+
+    <View android:id="@+id/separatosr"
+        android:background="#FF5430"
+        android:layout_width = "fill_parent"
+        android:layout_height="1.5dip"
+        android:layout_marginLeft="50dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/barrabusqueda" />
+    <View android:id="@+id/sepasratosr"
+        android:background="#BCED10"
+        android:layout_width = "fill_parent"
+        android:layout_height="1.5dip"
+        android:layout_marginLeft="80dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_below="@+id/barrabusqueda"
+        android:layout_alignEnd="@+id/separatosr" >
+    </View>
+    <View android:id="@+id/sepasratossr"
+        android:background="#F7C000"
+        android:layout_width = "fill_parent"
+        android:layout_height="1.5dip"
+        android:layout_marginLeft="120dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/barrabusqueda"
+        />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/etautobusqueda"
+        android:layout_below="@+id/barrabusqueda"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/adView" />
 
