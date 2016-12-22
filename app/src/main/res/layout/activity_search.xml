@@ -18,8 +18,6 @@
         android:layout_height="wrap_content"
         android:background="#e6045FB4"
         android:id="@+id/barrabusqueda"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         >
         <sv.devla.gupper.CustomAutoCompleteView
             android:layout_width="fill_parent"
@@ -33,14 +31,13 @@
             android:singleLine="true"
             android:paddingEnd="35dip"
             android:completionThreshold="1"
-            android:nextFocusUp="@+id/etautobusqueda"
-            android:nextFocusLeft="@+id/etautobusqueda"
-
 
             android:background="@drawable/rounded"
             android:layout_marginBottom="6dip"
-            android:id="@+id/etautobusqueda" />
+            android:id="@+id/etautobusqueda" >
 
+        <requestFocus />
+        </sv.devla.gupper.CustomAutoCompleteView>
         <ImageButton
             android:id="@+id/buttone1"
             android:layout_width="wrap_content"
@@ -107,6 +104,7 @@
         android:layout_below="@+id/barrabusqueda"
         android:layout_alignEnd="@+id/separatosr" >
     </View>
+
     <View android:id="@+id/sepasratossr"
         android:background="#F7C000"
         android:layout_width = "fill_parent"
@@ -116,14 +114,6 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/barrabusqueda"
         />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/barrabusqueda"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/adView" />
-
 
 
     <com.google.android.gms.ads.AdView
@@ -135,6 +125,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-
         android:layout_alignParentEnd="true"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adViewSearch1" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewSearch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"
+
+        android:layout_below="@+id/barrabusqueda"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

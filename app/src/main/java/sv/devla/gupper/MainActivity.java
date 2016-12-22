@@ -158,10 +158,12 @@ public class MainActivity extends AppCompatActivity
         //               .duration(7000)
         //               .playOn(findViewById(R.id.editText2));
         //
+
+        /*
         YoYo.with(Techniques.Shake)
                 .duration(7000)
                 .playOn(findViewById(R.id.textView2));
-
+        */
 
 
 

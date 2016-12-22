@@ -19,6 +19,8 @@ import org.json.JSONArray;
 
 import java.util.ArrayList;
 
+import utiles.DatabaseUpdaterService;
+
 public class SplashActivity extends Activity {
 
     // Splash screen timer
@@ -38,6 +40,7 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
 
 
+        startService(new Intent(this, DatabaseUpdaterService.class));
 
         YoYo.with(Techniques.Wobble)
                 .duration(700)

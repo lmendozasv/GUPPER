@@ -28,6 +28,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <service
+            android:name="utiles.DatabaseUpdaterService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -91,6 +98,10 @@
             android:label="@string/title_activity_get_birth"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchActivity"></activity>
+
+
+
+
     </application>
 
 </manifest>
