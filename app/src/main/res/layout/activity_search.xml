@@ -128,11 +128,16 @@
         android:layout_alignParentEnd="true"/>
 
     <ListView
+        android:id="@+id/lvsearch"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/adViewSearch1" />
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="5dip"
+        android:dividerHeight="10.0sp"
+        android:layout_below="@+id/adViewSearch1"
+        android:layout_above="@+id/adView" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adViewSearch1"
