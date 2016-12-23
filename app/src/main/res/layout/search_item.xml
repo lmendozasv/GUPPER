@@ -15,8 +15,8 @@
         android:id="@+id/textView9" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="125dp"
+        android:layout_width="125dp"
+        android:layout_height="150dp"
 
         app:srcCompat="@drawable/ic_bebidas"
         android:scaleType="fitXY"
