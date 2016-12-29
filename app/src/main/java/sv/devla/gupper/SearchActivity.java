@@ -157,6 +157,8 @@ public class SearchActivity extends AppCompatActivity {
             //text.setText(data[position]);
             return vi;
         }
+
+
     }
 
 }
