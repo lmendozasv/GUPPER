@@ -5,6 +5,8 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 
@@ -49,6 +51,9 @@ public class SearchByNameListener implements TextWatcher{
         mainActivity.myAdapter = new ArrayAdapter<String>(mainActivity, android.R.layout.simple_dropdown_item_1line, mainActivity.item);
         mainActivity.myAutoComplete.setAdapter(mainActivity.myAdapter);
 
+
+
     }
+
 
 }
