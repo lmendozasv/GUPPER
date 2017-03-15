@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/gradient_background"
 
-    tools:context="sv.devla.gupper.SplashActivity">
+    tools:context="sv.devla.multiprecios.SplashActivity">
 
 
     <ImageView
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="GUPPER"
+        android:text="multiprecios"
         fontPath="fonts/hm.ttf"
         android:textAlignment="center"
         android:id="@+id/textView2"

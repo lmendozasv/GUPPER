@@ -1,4 +1,4 @@
-package sv.devla.gupper;
+package sv.devla.multiprecios;
 
 
 import android.content.ContentValues;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SQLiteAdapter {
 
-    public static final String DATABASE_NAME = "gupperdb";
+    public static final String DATABASE_NAME = "multipreciosdb";
 
     public static final String DEPTO_TABLE = "tbl_departaments";
     public static final String MUNIC_TABLE = "tbl_municipalities";

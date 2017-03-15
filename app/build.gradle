@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "sv.devla.gupper"
+        applicationId "sv.devla.multiprecios"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

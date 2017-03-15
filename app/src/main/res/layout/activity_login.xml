@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Para ulitizar GUPPER, Tu comparador de precios debes iniciar sesión con tu cuenta de facebook"
+                android:text="Para ulitizar multiprecios, Tu comparador de precios debes iniciar sesión con tu cuenta de facebook"
                 fontPath="fonts/hm.ttf"
                 android:textAlignment="center"
                 android:id="@+id/textView2"

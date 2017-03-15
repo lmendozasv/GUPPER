@@ -13,8 +13,8 @@ import org.json.JSONArray;
 
 import java.util.ArrayList;
 
-import sv.devla.gupper.DatabaseHandler;
-import sv.devla.gupper.ProductSearchObject;
+import sv.devla.multiprecios.DatabaseHandler;
+import sv.devla.multiprecios.ProductSearchObject;
 
 
 public class DatabaseUpdaterService extends Service {

@@ -8,7 +8,7 @@
 
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_back"
-    tools:context="sv.devla.gupper.SearchActivity">
+    tools:context="sv.devla.multiprecios.SearchActivity">
 
 
 
@@ -19,7 +19,7 @@
         android:background="#e6045FB4"
         android:id="@+id/barrabusqueda"
         >
-        <sv.devla.gupper.CustomAutoCompleteView
+        <sv.devla.multiprecios.CustomAutoCompleteView
             android:layout_width="fill_parent"
             android:layout_height="40dip"
             android:padding="5dip"
@@ -37,7 +37,7 @@
             android:id="@+id/etautobusqueda" >
 
         <requestFocus />
-        </sv.devla.gupper.CustomAutoCompleteView>
+        </sv.devla.multiprecios.CustomAutoCompleteView>
         <ImageButton
             android:id="@+id/buttone1"
             android:layout_width="wrap_content"

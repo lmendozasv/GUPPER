@@ -1,4 +1,4 @@
-package sv.devla.gupper;
+package sv.devla.multiprecios;
 
 import android.content.ContentValues;
 import android.content.Context;

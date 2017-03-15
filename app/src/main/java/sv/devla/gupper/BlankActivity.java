@@ -1,4 +1,4 @@
-package sv.devla.gupper;
+package sv.devla.multiprecios;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

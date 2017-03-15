@@ -8,7 +8,7 @@
     android:background="@drawable/gradient_back"
     android:id="@+id/root"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="sv.devla.gupper.MainActivity"
+    tools:context="sv.devla.multiprecios.MainActivity"
     tools:showIn="@layout/app_bar_main"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     >
@@ -30,7 +30,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         >
-        <sv.devla.gupper.CustomAutoCompleteView
+        <sv.devla.multiprecios.CustomAutoCompleteView
             android:layout_width="fill_parent"
             android:layout_height="40dip"
             android:padding="5dip"

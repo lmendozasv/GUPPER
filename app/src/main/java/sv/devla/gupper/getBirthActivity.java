@@ -1,4 +1,4 @@
-package sv.devla.gupper;
+package sv.devla.multiprecios;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
