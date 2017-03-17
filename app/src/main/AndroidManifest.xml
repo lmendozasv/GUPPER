@@ -22,13 +22,12 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
-        android:name=".multipreciosClass"
+        android:name=".MultipreciosClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <service
             android:name="utiles.DatabaseUpdaterService"
             android:enabled="true"
@@ -97,11 +96,11 @@
             android:name=".getBirthActivity"
             android:label="@string/title_activity_get_birth"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SearchActivity"></activity>
-
-
-
-
+        <activity android:name=".SearchActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
