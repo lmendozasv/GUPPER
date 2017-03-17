@@ -1,13 +1,12 @@
 package sv.devla.multiprecios;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ScaleDrawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings.Secure;
@@ -15,9 +14,7 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -27,41 +24,22 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import org.lucasr.twowayview.TwoWayView;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import tyrantgit.explosionfield.ExplosionField;
 
-import static android.R.attr.scaleHeight;
-import static android.R.attr.scaleWidth;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -141,7 +119,7 @@ public class MainActivity extends AppCompatActivity
                 Secure.ANDROID_ID);
 
 
-        mAdView = (AdView) findViewById(R.id.adView);
+      /*  mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
                 .build();
@@ -152,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(false);
 
-
+*/
 
 //        YoYo.with(Techniques.Shake)
         //               .duration(7000)
@@ -166,7 +144,7 @@ public class MainActivity extends AppCompatActivity
         */
 
 
-
+/*
         allSampleData = new ArrayList<SectionDataModel>();
 
         createDummyData();
@@ -207,6 +185,10 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
+        */
+
+
+Log.d("Load","Load");
 
     }
 
