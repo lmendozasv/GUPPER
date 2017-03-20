@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
     tools:context="sv.devla.multiprecios.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -42,6 +43,8 @@
                 android:gravity="right"
                 android:textSize="18dp">
 
+
+
                 <ImageView
                     android:layout_width="50dip"
                     android:layout_height="wrap_content"
@@ -54,12 +57,12 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
 
-                <TextView
+                <sv.devla.multiprecios.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="10 MONEDAS"
-                    fontPath="fonts/hm.ttf"
+                    customAttrs:customFont="bariol"
                     android:gravity="center_vertical"
                     android:layout_gravity="end"
                     android:id="@+id/textView2"
@@ -77,8 +80,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
+    <include layout="@layout/alter_main"
+        android:id="@+id/include" />
 
 
 </android.support.design.widget.CoordinatorLayout>
