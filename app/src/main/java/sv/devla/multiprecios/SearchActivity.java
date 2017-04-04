@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,12 +45,16 @@ public class SearchActivity extends AppCompatActivity {
 
 
 
-        //View smallImageView = findViewById(R.id.textView);
+
+
+
         View editText = findViewById(R.id.etautobusqueda);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-          //  smallImageView.setTransitionName(getString(R.string.activity_text_trans));
-            editText.setTransitionName(getString(R.string.activity_mixed_trans));
+            editText.setTransitionName(getString(R.string.trxstring));
+
         }
+
+
 //autocomplete inicio
         try{
 
@@ -69,19 +74,19 @@ public class SearchActivity extends AppCompatActivity {
         //autocomplete fin
 
 
-        mAdView = (AdView) findViewById(R.id.adView);
-        mAdView2 = (AdView) findViewById(R.id.adViewSearch1);
-
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
-                .build();
-
-        AdRequest adRequest2 = new AdRequest.Builder()
-                .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
-                .build();
-
-        mAdView.loadAd(adRequest);
-        mAdView2.loadAd(adRequest2);
+//        mAdView = (AdView) findViewById(R.id.adView);
+//        mAdView2 = (AdView) findViewById(R.id.adViewSearch1);
+//
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
+//                .build();
+//
+//        AdRequest adRequest2 = new AdRequest.Builder()
+//                .addTestDevice("CD9BF0A478AF16984B67A0EC13B45623")
+//                .build();
+//
+//        mAdView.loadAd(adRequest);
+//        mAdView2.loadAd(adRequest2);
 
 
 
@@ -89,7 +94,7 @@ public class SearchActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.lvsearch);
         listview.setAdapter(new yourAdapter(this, new String[] { "data1",
                 "data2" }));
-
+        Log.d("DEPURAR"," AKTIVITY SEARH");
     }
 
 
